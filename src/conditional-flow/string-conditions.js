@@ -2,6 +2,7 @@
 function isHello (val1) {
 
   // TODO: write code in this function body to pass the tests
+  return val1 === 'Hello'
 
 }
 
@@ -9,6 +10,7 @@ function isHello (val1) {
 function isNotHello (val1) {
 
   // TODO: write code in this function body to pass the tests
+  return ! isHello(val1)
 
 }
 
@@ -17,6 +19,7 @@ function isNotHello (val1) {
 function isLongerThan (val1, val2) {
 
   // TODO: write code in this function body to pass the tests
+  return val1.length > val2.length
 
 }
 
@@ -26,7 +29,19 @@ function isLongerThan (val1, val2) {
 function hasOddNumberVowels (val1) {
 
   // TODO: write code in this function body to pass the tests
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  let numVowels = 0;
 
+  for ( let i = 0; i < val1.length; i ++ )
+  {
+    let ch = val1[i].toLowerCase()
+
+    if ( vowels.indexOf( ch ) !== -1 ) {
+      numVowels ++
+    }
+  }
+
+  return numVowels % 2 === 1
 }
 
 // this function should return the middle character of a string if it has an odd number
@@ -36,7 +51,17 @@ function hasOddNumberVowels (val1) {
 function getMiddleLetter (val1) {
   // TODO: write code in this function body to pass the tests
 
+
+  if ( val1.length % 2 === 0 ) {
+    let mid = val1.length / 2 - 1
+    return val1.slice( mid, mid+2 )
+  } else {
+    let mid = val1.length / 2
+    return val1.slice( mid, mid+1 )
+  }
 }
+
+
 
 // This function should return the name of the season for the provided
 // month name. For example, "January" should return "Winter". If the provided
@@ -50,6 +75,22 @@ function getMiddleLetter (val1) {
 function seasonForMonth (monthName) {
 
   // TODO: write code in this function body to pass the tests
+  let winter = [ 'December', 'January', 'February' ]
+  let spring = [ 'March', 'April', 'May' ]
+  let summer = [ 'June', 'July', 'August' ]
+  let autumn = [ 'September', 'October', 'November' ]
+
+  if ( winter.includes( monthName ) ) {
+    return "Winter"
+  } else if ( spring.includes( monthName ) ) {
+    return "Spring"
+  } else if ( summer.includes( monthName ) ) {
+    return "Summer"
+  } else if ( autumn.includes( monthName ) ) {
+    return "Autumn"
+  } else {
+    return ""
+  }
 }
 
 module.exports = {

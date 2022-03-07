@@ -4,7 +4,13 @@
 // TO DO: write code below
 
 function sayHi () {
-  return 'Hi, Ed!'
+
+  // // Do some complex work
+  // const hi = "Hi, Ed!"
+
+
+
+  return "Hi, Ed!"
 }
 
 // Define a function that increments (adds 1 to ) a number

@@ -4,6 +4,7 @@
 function isInRange (num, lower, upper) {
 
   // TODO: write code in this function body to pass the tests
+  return (num >= lower) && (num <= upper)
 
 }
 
@@ -13,6 +14,7 @@ function isInRange (num, lower, upper) {
 function isHelloOrGoodbye (val1) {
 
   // TODO: write code in this function body to pass the tests
+  return val1 === 'Hello' || val1 === 'Goodbye'
 
 }
 
@@ -31,6 +33,19 @@ function isHelloOrGoodbye (val1) {
 function getAgeDescription (age) {
 
   // TODO: write code in this function body to pass the tests
+  if ( age >= 20 ) {
+    return 'Adult'
+  } else if ( age >= 13 ) {
+    return 'Teenager'
+  } else if ( age >= 5 ) {
+    return 'Child'
+  } else if ( age >= 1 ) {
+    return 'Toddler'
+  } else if ( age >= 0 ) {
+    return 'Baby'
+  } else {
+    return '???'
+  }
 }
 
 module.exports = {
